@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(str) {
+        let i;
+        let check=false;
+         let   str1 = str.substr(0, Math.floor(str.length / 2));
+         let   str2 = str.substr(Math.ceil(str.length / 2), Math.floor(str.length / 2));
+            for (i = 0; i < Math.floor(str.length / 2); i++) {
+                if (str1[i] === str2[(Math.floor(str.length / 2))- 1 - i]) {
+                    check = true;
+                }
+                else {
+                    check= false;
+                     break;}
+            }
+            return check;
+        }
+    let str= prompt("nhap 1 chuoi : ");
+   str=str.trim();
+   let result= isPalindrome(str);
+    if(result){
+        document.write("chuoi  is palindrome! ");
+    }
+    else{
+        document.write("chuoi is not palindrome");
+    }
+</script>
+</body>
+</html>
